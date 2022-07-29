@@ -3,17 +3,26 @@ body {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 60px;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
 }
 
 header ul {
@@ -24,12 +33,24 @@ header li {
   margin-left: 20px;
 }
 
+header a {
+  color: rgb(255, 251, 0);
+  font-size: 20px;
+  padding: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+header a:hover {
+  color: rgb(77, 77, 77);
+  background-color: rgb(255, 251, 0);
+  border-radius: 6px;
+}
+
 #page-logo a {
   padding: 10px;
   font-family: "Oleo Script", sans-serif;
   color: rgb(245, 243, 160);
   font-size: 50px;
-  text-decoration: none;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
