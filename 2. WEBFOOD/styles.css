@@ -8,6 +8,27 @@ a {
   text-decoration: none;
 }
 
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(238, 164, 80);
+  text-transform: uppercase;
+}
+
+.menu-btn {
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menu-btn span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
 #main-header {
   height: 5rem;
   display: flex;
@@ -15,13 +36,6 @@ a {
   align-items: center;
   background-color: rgb(29, 26, 24);
   padding: 0 5%;
-}
-
-#logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(238, 164, 80);
-  text-transform: uppercase;
 }
 
 #main-header ul {
@@ -42,6 +56,46 @@ a {
 
 #main-header nav a:hover {
   color: rgb(228, 163, 44);
+}
+
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#side-drawer:target {
+  display: block;
+}
+
+#side-drawer header {
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5%;
+}
+
+#side-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#side-drawer li {
+  margin: 1rem 0;
+}
+
+#side-drawer a {
+  color: rgb(253, 239, 213);
+  font-size: 2rem;
 }
 
 main h1 {
@@ -81,6 +135,10 @@ main h1 {
   text-align: center;
 }
 
+.food-item h2 {
+  margin: 0 0 1rem;
+}
+
 .btn {
   background-color: rgb(228, 157, 44);
   color: white;
@@ -95,6 +153,10 @@ main h1 {
 @media (max-width: 48rem) {
   #main-header nav {
     display: none;
+  }
+
+  .menu-btn {
+    display: flex;
   }
 
   main h1 {
