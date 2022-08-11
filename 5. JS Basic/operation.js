@@ -20,3 +20,10 @@ result -= 5; // result = result - 5
 result /= 5; // result = result / 5
 result *= 5; // result = result * 5
 console.log(result);
+
+console.log("Max" + " " + "Schwarzmuller");
+console.log("Max" - "ax"); // NaN
+
+let userName = "Max";
+console.log(userName.length);
+console.log(userName.toUpperCase());
