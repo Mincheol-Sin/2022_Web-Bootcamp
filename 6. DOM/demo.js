@@ -1,6 +1,6 @@
 // 1. Input 요소와 남아있는 글자수를 나타내는 요소에 접근하기
 const productNameInputElement = document.getElementById("product-name");
-const remainningCharsElement = document.getElementById("remaining-chars");
+const remainingCharsElement = document.getElementById("remaining-chars");
 
 const maxAllowedChars = productNameInputElement.maxLength;
 
@@ -11,7 +11,15 @@ function updateRemainingCharacters(event) {
 
   const remainingCharacters = maxAllowedChars - enteredTextLength; // 남은 글자수
 
-  remainningCharsElement.textContent = remainingCharacters; // 남은 글자수로 콘텐츠 변환
+  remainingCharsElement.textContent = remainingCharacters; // 남은 글자수로 콘텐츠 변환
+
+  if (remainingCharacters <= 10) {
+    remainingCharsElement.classList.add("warning");
+    productNameInputElement.classList.add("warning");
+  } else {
+    remainingCharsElement.classList.remove("warning");
+    productNameInputElement.classList.remove("warning");
+  }
 }
 
 // 2. input 양식에 값이 입력될 시 이벤트 발생시키기
