@@ -13,9 +13,14 @@ function updateRemainingCharacters(event) {
 
   remainingCharsElement.textContent = remainingCharacters; // 남은 글자수로 콘텐츠 변환
 
-  if (remainingCharacters <= 10) {
+  if (remainingCharacters == 0) {
+    remainingCharsElement.classList.add("error");
+    productNameInputElement.classList.add("error");
+  } else if (remainingCharacters <= 10) {
     remainingCharsElement.classList.add("warning");
     productNameInputElement.classList.add("warning");
+    remainingCharsElement.classList.remove("error");
+    productNameInputElement.classList.remove("error");
   } else {
     remainingCharsElement.classList.remove("warning");
     productNameInputElement.classList.remove("warning");
