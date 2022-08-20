@@ -1,4 +1,18 @@
-const http = require("http");
+const express = require("express");
+
+const app = express();
+
+app.get("/currenttime", function (req, res) {
+  res.send("<h1>" + new Date().toISOString() + "</h1>");
+}); // localhost:3000/currenttime
+
+app.get("/", function (req, res) {
+  res.send("<h1>Hello World!</h1>");
+}); // localhost:3000/
+
+app.listen(3000);
+
+/* Node.js 코드로 서버 구축하는 법
 
 function handleRequest(request, response) {
   if (request.url === "/currenttime") {
@@ -13,3 +27,4 @@ function handleRequest(request, response) {
 const server = http.createServer(handleRequest);
 
 server.listen(3000);
+*/
